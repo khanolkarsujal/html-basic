@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --background-color: #f9f9f9;
+    --accent-color: #007BFF;
+    --font-family: 'Merriweather', serif;
+    /* Added missing variables used in your code */
+    --text-color: #2d2d2d;
+    --base-color: #ffffff;
+    --base-color-1: #f0f0f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+body {
+    padding: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-family);
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    margin: 1rem auto 3rem auto;
+    max-width: 1000px; /* Simplified for better compatibility */
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none; /* Fixed typo */
+    gap: 2rem;
+}
+
+nav li:first-child {
+    margin-right: auto;
+    font-family: var(--font-family);
+    font-weight: bold;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+header, section {
+    margin: 2em auto;
+    max-width: 75em;
+    width: 95%;
+    background-color: var(--base-color-1);
+    padding: 2em; /* Fixed space in min() function */
+    border-radius: 1em;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3em;
+}
+
+header img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 1em;
+    object-fit: cover; /* Fixed typo */
+    object-position: center; /* Fixed typo */
+}
+
+.text-container {
+    flex: 1;
+    min-width: 300px;
+    font-size: 1.25rem;
+}
+
+/* Button Styling */
+.cta-button {
+    display: inline-block;
+    padding: 0.75em 1.5em;
+    background-color: var(--accent-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: transform 0.2s ease;
+    margin-top: 1rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+}
+
+/* Fixed the selector to match your HTML class="cta-button secondary" */
+.cta-button.secondary {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
